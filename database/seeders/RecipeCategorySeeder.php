@@ -16,9 +16,9 @@ class RecipeCategorySeeder extends Seeder
     public function run()
     {
         RecipeCategory::factory()
-            ->count(5)
+            ->count(10)
             ->has(Recipe::factory()
-                ->count(50)
+                ->count(500)
                 ->hasIngredients(3)
             )
             ->create()

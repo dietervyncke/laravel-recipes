@@ -23,7 +23,7 @@ class RecipeFactory extends Factory
     public function definition()
     {
         return [
-            'title' => $this->faker->word(6),
+            'title' => $this->faker->sentence(6),
             'slug' => $this->faker->slug(4),
             'is_visible' => $this->faker->boolean(85),
             'preparation' => $this->faker->text(),

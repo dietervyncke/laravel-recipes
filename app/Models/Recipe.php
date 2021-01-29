@@ -65,7 +65,12 @@ class Recipe extends Model
      */
     public function scopeSearch($query, ?string $search)
     {
-        return $query->where('title', 'like', '%'.$search.'%');
+        return $query
+            ->whereHas('ingredients', function ($query) use ($search) {
+                $query->where('name', 'like', '%'.$search.'%');
+            })
+            ->orWhere('title', 'like', '%'.$search.'%')
+        ;
     }
 
     /**

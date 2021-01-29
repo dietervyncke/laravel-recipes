@@ -13,6 +13,7 @@
             </div>
 
             <div class="content-block__right-column">
+                {{ $recipe->duration }}<br />
                 {{ $recipe->preparation }}
             </div>
         </div>
