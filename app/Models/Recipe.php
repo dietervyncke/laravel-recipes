@@ -67,4 +67,16 @@ class Recipe extends Model
     {
         return $query->where('title', 'like', '%'.$search.'%');
     }
+
+    /**
+     * @param $query
+     * @return mixed
+     */
+    public function scopeRelated($query)
+    {
+        return $query
+            ->where('recipe_category_id', $this->recipe_category_id)
+            ->where('id', '<>', $this->id)
+        ;
+    }
 }
