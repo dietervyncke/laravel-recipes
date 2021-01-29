@@ -1,11 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\RecipeController as RecipeController;
 
-Route::get('/', function () {
-    return 'overview page';
-});
-
-Route::get('/{recipe}', function() {
-    return 'recipe detail page';
-});
+Route::get('/', [RecipeController::class, 'index']);
+Route::get('/{recipe}', [RecipeController::class, 'show'])->name('recipes.show');

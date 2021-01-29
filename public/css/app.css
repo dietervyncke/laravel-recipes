@@ -1,0 +1,111 @@
+html {
+  font-size: 100%;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  font-weight: inherit;
+  font-style: inherit;
+}
+
+a {
+  text-decoration: none;
+  font-weight: inherit;
+  color: inherit;
+}
+a img {
+  border: 0;
+}
+
+li {
+  list-style: none;
+}
+
+fieldset {
+  border: 0;
+}
+
+button {
+  border: 0;
+  text-align: left;
+  background: transparent;
+}
+
+*:focus {
+  outline: none;
+}
+
+button, input, textarea {
+  font: inherit;
+}
+
+body {
+  font-family: "Helvetica";
+  line-height: 1.5;
+}
+
+header {
+  margin: 2rem 0;
+}
+
+#wrapper {
+  display: block;
+  width: 80%;
+  margin: 0 auto;
+}
+
+footer {
+  margin: 2rem 0;
+}
+
+.title {
+  font-size: 3rem;
+}
+
+.title--secondary {
+  font-size: 2rem;
+}
+
+.item-grid {
+  display: grid;
+  width: 100%;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(5, 1fr);
+}
+.item-grid__item {
+  display: block;
+}
+
+.content-block {
+  display: block;
+  width: 100%;
+}
+.content-block__header {
+  margin-bottom: 2rem;
+}
+.content-block__main {
+  display: flex;
+}
+.content-block__left-column {
+  flex-basis: 45%;
+}
+.content-block__right-column {
+  flex-grow: 1;
+  margin-left: 6rem;
+}
+
+.key-value-list {
+  display: block;
+  width: 100%;
+}
+.key-value-list__item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.25rem;
+}
+.key-value-list__item span {
+  font-weight: bold;
+}
