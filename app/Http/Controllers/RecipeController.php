@@ -7,18 +7,6 @@ use App\Models\Recipe;
 class RecipeController extends Controller
 {
     /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
-    {
-        $recipes = Recipe::paginate(50);
-
-        return view('recipes.index', compact('recipes'));
-    }
-
-    /**
      * Display the specified resource.
      *
      * @param  \App\Models\Recipe  $recipe

@@ -34,4 +34,37 @@ class Recipe extends Model
     {
         return $this->belongsTo(RecipeCategory::class);
     }
+
+    /**
+     * @param $query
+     * @return mixed
+     */
+    public function scopeVisible($query)
+    {
+        return $query->where('is_visible', true);
+    }
+
+    /**
+     * @param $query
+     * @param string|null $categoryId
+     * @return mixed
+     */
+    public function scopeCategory($query, ?string $categoryId)
+    {
+        if (! $categoryId) {
+            return $query;
+        }
+
+        return $query->where('recipe_category_id', $categoryId);
+    }
+
+    /**
+     * @param $query
+     * @param string|null $search
+     * @return mixed
+     */
+    public function scopeSearch($query, ?string $search)
+    {
+        return $query->where('title', 'like', '%'.$search.'%');
+    }
 }
