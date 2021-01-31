@@ -1,5 +1,8 @@
 <div>
-    <input wire:model="amount" type="number" name="amount">
+    <fielset>
+        <label for="amount">Serves</label>
+        <input wire:model="amount" type="number" name="amount" class="field" id="amount" min="1" max="20"/>
+    </fielset>
 
     <ul class="key-value-list">
         @foreach ($recipe->ingredients as $ingredient)

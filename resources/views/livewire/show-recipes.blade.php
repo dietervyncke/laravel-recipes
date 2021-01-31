@@ -18,7 +18,7 @@
         <div class="filter-block__item">
             <fieldset class="fieldset">
                 <label for="search">Search</label>
-                <input wire:model="search" type="text" class="field" id="search">
+                <input wire:model="search" type="text" class="field" id="search"/>
             </fieldset>
         </div>
 

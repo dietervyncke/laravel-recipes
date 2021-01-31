@@ -13,16 +13,16 @@ class ShowRecipes extends Component
 
     public $categories;
 
-    public $page = 1;
+    public $selectedCategory = '';
 
     public $search = '';
 
+    public $page = 1;
+
     public $perPage = 10;
 
-    public $selectedCategory = null;
-
     protected $queryString = [
-        'selectedCategory' => ['except' => null],
+        'selectedCategory' => ['except' => ''],
         'search' => ['except' => ''],
         'page' => ['except' => 1],
         'perPage'

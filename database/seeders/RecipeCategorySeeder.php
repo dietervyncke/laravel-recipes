@@ -19,7 +19,7 @@ class RecipeCategorySeeder extends Seeder
             ->count(10)
             ->has(Recipe::factory()
                 ->count(500)
-                ->hasIngredients(3)
+                ->hasIngredients(10)
             )
             ->create()
         ;
